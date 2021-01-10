@@ -45,8 +45,6 @@ RUN mkdir $APP_ROOT
 WORKDIR $APP_ROOT
 
 ADD rails/Gemfile $APP_ROOT/Gemfile 
-ADD rails/Gemfile.lock $APP_ROOT/Gemfile.lock 
-
 RUN gem install bundler 
 RUN bundle install
 ADD rails/ $APP_ROOT
