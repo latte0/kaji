@@ -117,4 +117,18 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
+
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+    :address => 'smtp.sfc.keio.ac.jp',
+    :port => 587,
+    :domain => 'sfc.keio.ac.jp',
+    :user_name => "t16463kj",
+    :password => "uxtksymx0726",
+    :domain => 'sfc.keio.ac.jp'
+  }
+
+
 end

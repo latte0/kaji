@@ -73,4 +73,20 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+
+
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+    :address => 'smtp.sfc.keio.ac.jp',
+    :port => 587,
+    :domain => 'sfc.keio.ac.jp',
+    :user_name => "t16463kj",
+    :password => "uxtksymx0726",
+    :domain => 'sfc.keio.ac.jp'
+  }
+
+
+
 end

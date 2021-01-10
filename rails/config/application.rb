@@ -18,5 +18,17 @@ module Kaji
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+
+    config.paths.add File.join('app', 'apis'), glob: File.join('**', '*.rb')
+    config.autoload_paths += Dir[Rails.root.join('app', 'apis', '*')]
+
+    config.middleware.use(Rack::Config) do |env|
+      env['api.tilt.root'] = Rails.root.join 'app', 'views', 'apis'
+    end
+
+    config.middleware.use ActionDispatch::Cookies
+
+    
   end
 end
