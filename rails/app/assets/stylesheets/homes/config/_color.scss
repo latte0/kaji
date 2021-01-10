@@ -1,0 +1,30 @@
+$colors: (
+  black:                         #111111,
+  gray:                          #828282,
+  white:                         #ffffff,
+  gray-100:                      #F2F2F2,
+  gray-200:                      #E0E0E0,
+  gray-700:                      #BDBDBD,
+  blue:                          #00376B,
+  gold:                          #BF9D62,
+  red:                           #eb4357,
+);
+//colors(変数名)
+@function color($colorName) {
+  @return map-get($colors, $colorName);
+}
+@each $colorName, $color in $colors {
+  //.text-変数名 のclassを生成
+  .text-#{$colorName} {
+    color: $color;
+  }
+  //.bg-変数名 のclassを生成
+  .bg-#{$colorName} {
+    background: $color;
+  }
+}
+@mixin placeholder($colors) {
+  &::placeholder {
+    color: $colors;
+  }
+}

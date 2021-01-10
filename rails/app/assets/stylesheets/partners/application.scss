@@ -1,0 +1,78 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import 'font-awesome';
+@import 'bootstrap-datetimepicker';
+
+#partner_auth{
+  max-width: 500px;
+  margin: 0 auto;
+  .form-inputs{
+    .invalid-feedback{
+      color: red;
+      font-weight: 800;
+    }
+  }
+  .form-actions{
+    text-align: center;
+    input{
+      padding: 10px 50px;
+      background: deepskyblue;
+      color: white;
+      &:hover{
+        opacity: 0.8;
+      }
+    }
+  }
+}
+.partner_table{
+  position: relative;
+  top: 30px;
+}
+
+.partner_relative{
+  position: relative;
+  top: 30px;
+}
+.partner_text{
+  color: gray;
+  font-size: 14px;
+  margin-left: 15px;
+}
+.sales_table{
+  margin-left: 15px;
+  margin-bottom: 30px;
+  table{
+    border-collapse: collapse;
+  }
+  table td{
+    padding: 5px;
+    border: solid 1px lightgray;
+  }
+  .value{
+    width: 100px;
+  }
+}
+.sales_status{
+  display: flex;
+  justify-content: space-around;
+  .status_item{
+    font-size: 2rem;
+    span{
+      font-weight: 500;
+      padding: 0 5px;
+    }
+  }
+}

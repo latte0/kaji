@@ -1,0 +1,83 @@
+@mixin transition($what: all, $time: 0.2s, $how: ease-in-out) {
+  -webkit-transition: $what $time $how;
+  -moz-transition:    $what $time $how;
+  -ms-transition:     $what $time $how;
+  -o-transition:      $what $time $how;
+  transition:         $what $time $how;
+}
+
+@mixin font-default($weight){
+  font-weight: $weight;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+$fontsizes: (
+  size-xl:    2rem,
+  size-lg:    1.25rem,
+  size-md:    1.125rem,
+  size-base:  1rem   ,
+  size-base2: .94rem ,
+  size-base3: .88rem ,
+  size-sm:    .81rem ,
+  size-xs:    .75rem ,
+  size-xxs:   .685rem
+);
+//colors(変数名)
+@function fontsize($fontSize) {
+  @return map-get($fontsizes, $fontSize);
+}
+@each $fontSize, $fontsize in $fontsizes {
+  //.text-変数名 のclassを生成
+  .font-#{$fontSize} {
+    font-size: $fontsize !important;
+  }
+}
+
+@mixin placeholder($color) {
+  &::placeholder {
+    color: $color;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+
+  &::-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+@mixin line-clamp-no-dot($row) {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: $row;
+  -webkit-box-orient: vertical;
+}
+@mixin text_over_hidden {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin dashed-border($dashlength, $spacelength, $borderwidth, $color) {
+  $per: percentage($dashlength / ($dashlength + $spacelength));
+  background-image:
+          linear-gradient(to right, $color 0%, $color $per, rgba(0, 0, 0, 0) $per),
+          linear-gradient(to bottom, $color 0%, $color $per, rgba(0, 0, 0, 0) $per),
+          linear-gradient(to right, $color 0%, $color $per, rgba(0, 0, 0, 0) $per),
+          linear-gradient(to bottom, $color 0%, $color $per, rgba(0, 0, 0, 0) $per);
+  background-position: (-$spacelength) 0, 0 (-$spacelength),  (-$spacelength) 100%, 100% (-$spacelength);
+  background-size: ($dashlength + $spacelength) $borderwidth, $borderwidth ($dashlength + $spacelength),($dashlength + $spacelength) $borderwidth, $borderwidth ($dashlength + $spacelength);
+  background-repeat: repeat-x, repeat-y, repeat-x, repeat-y;
+}
+
+@mixin transition_btn {
+  -webkit-transition: all 400ms cubic-bezier(0.400, 0.215, 0.435, 1);
+  -webkit-transition: all 400ms cubic-bezier(0.400, 0.215, 0.435, 1.050);
+  -moz-transition: all 400ms cubic-bezier(0.400, 0.215, 0.435, 1.050);
+  -o-transition: all 400ms cubic-bezier(0.400, 0.215, 0.435, 1.050);
+  transition: all 400ms cubic-bezier(0.400, 0.215, 0.435, 1.050);
+}

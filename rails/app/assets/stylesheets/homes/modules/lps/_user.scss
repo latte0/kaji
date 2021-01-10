@@ -1,0 +1,613 @@
+#layout_lp_user{
+  overflow: hidden;
+
+  /* ==----------------------------------
+    ■ common
+  ----------------------------------== */
+
+  .sec-title{
+    text-align: center;
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 2px;
+    @media screen and (max-width: 608px){
+      font-size: 11px;
+    }
+    &:before{
+      content: '';
+      display: inline-block;
+      width: 48px;
+      height: 47px;
+      background-image: url($img_url + "/public/img/home/lp_user/hl_ico.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      vertical-align: middle;
+      margin-bottom: 8px;
+      @media screen and (max-width: 608px){
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+
+
+  .title-h{
+    margin: 30px 0 50px;
+    font-size: 28px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.83;
+    @media screen and (max-width: 608px){
+      margin: 15px 0;
+      font-size: 18px;
+      font-weight: 900;
+    }
+    .marker{
+      background: linear-gradient(transparent 24px, #f9da6a 50%);
+      @media screen and (max-width: 608px){
+        background: linear-gradient(transparent 15px, #f9da6a 50%);
+      }
+    }
+  }
+
+  .pc_none{
+    display: none;
+    @media screen and (max-width: 608px){
+      display: block;
+    }
+  }
+
+  .sp_none{
+    @media screen and (max-width: 608px){
+      display: none;
+    }
+  }
+
+  /* ==----------------------------------
+    ■ sec-01
+  ----------------------------------== */
+
+  #sec-01{
+    margin: auto;
+    max-width: 1440px;
+    height: 590px;
+    background-image: url($img_url + "/public/img/home/lp_user/sec01bg.jpg");
+    background-size: cover;
+    position: relative;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+
+    @media screen and (max-width: 608px){
+      background-image: none;
+    }
+
+    .container01{
+      max-width: 1080px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      align-items: flex-end;
+      @media screen and (max-width: 608px){
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .left01{
+      min-width: 348px;
+      text-align: center;
+      margin: 0 100px 122px 0;
+
+      @media screen and (max-width: 608px){
+        padding: 34px 0;
+        width: 100%;
+        margin: 0;
+      }
+      .logo{
+        width: 250px;
+        @media screen and (max-width: 608px){
+          width: 155px;
+        }
+      }
+      h2{
+        font-size: 18px;
+        margin: 10px 0 20px;
+        font-weight: bold;
+
+        @media screen and (max-width: 608px){
+          font-size: 13px;
+          margin: 10px;
+        }
+      }
+      p{
+        font-size: 14px;
+        font-weight: 500;
+
+        @media screen and (max-width: 608px){
+          font-size: 11px;
+        }
+      }
+      .reg_btn01{
+        margin-top: 25px;
+        display: table;
+        width: 100%;
+        height: 95px;
+        background-image: url($img_url + "/public/img/home/lp_user/btn.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        @media screen and (max-width: 608px){
+          display: none;
+        }
+      }
+    }
+
+    .phone01{
+      min-width: 400px;
+      max-width: 400px;
+      @media screen and (max-width: 608px){
+        padding: 0 28px;
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        transform: translateX(50%);
+        height: 415px;
+      }
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  /* ==----------------------------------
+    ■ sec-02
+  ----------------------------------== */
+
+  #sec-02{
+    padding: 80px 0;
+    text-align: center;
+
+    @media screen and (max-width: 608px){
+      padding: 60px 0;
+    }
+
+
+    .flex02{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media screen and (max-width: 608px){
+        display: block;
+      }
+      p{
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 2.25;
+        margin-right: 100px;
+        min-width: 360px;
+        @media screen and (max-width: 608px){
+          min-width: auto;
+          margin: 0;
+          font-size: 12px;
+          font-weight: 500;
+        }
+      }
+      img{
+        width: 300px;
+        @media screen and (max-width: 608px){
+          margin-top: 26px;
+        }
+      }
+    }
+  }
+
+  /* ==----------------------------------
+    ■ sec-03
+  ----------------------------------== */
+
+  #sec-03{
+    padding-bottom: 80px;
+    text-align: center;
+
+    @media screen and (max-width: 608px){
+      padding-bottom: 60px;
+    }
+  }
+
+  /* ==----------------------------------
+    ■ sec-04
+  ----------------------------------== */
+
+  #sec-04{
+    padding-bottom: 80px;
+    @media screen and (max-width: 608px){
+      padding-bottom: 60px;
+    }
+    .flow04{
+      display:flex;
+      justify-content: space-around;
+      max-width: 1080px;
+      margin: 120px auto 0;
+      text-align: center;
+      align-items: center;
+      @media screen and (max-width: 608px){
+        display: block;
+        margin-top: 85px;
+      }
+    }
+
+    .step{
+      min-width: 220px;
+      text-align: center;
+      position: relative;
+      .phone{
+        margin: auto;
+        position: relative;
+        width: 125px;
+        @media screen and (max-width: 608px){
+          margin: 50px auto 0;
+        }
+        .img04{
+          position: relative;
+          width: 100%;
+          z-index: 1;
+        }
+      }
+      .info{
+        margin-top: 72px;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 2;
+        @media screen and (max-width: 608px){
+          font-size: 14px;
+          font-weight: 500;
+          margin-top: 30px;
+        }
+      }
+    }
+
+    .arrow{
+      display: inline-block;
+      min-width: 87px;
+      height: 21px;
+      background-image: url($img_url + "/public/img/home/lp_user/arrow_right.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      vertical-align: middle;
+      position: relative;
+      top: -58px;
+      &.judge{
+        background-image: url($img_url + "/public/img/home/lp_user/arrow_right_judge.png");
+        height: 52px;
+      }
+
+      @media screen and (max-width: 608px){
+        margin-top: 44px;
+        height: 65px;
+        min-width: 21px;
+        position: initial;
+        background-image: url($img_url + "/public/img/home/lp_user/arrow_down.png");
+        &.judge{
+          height: 65px;
+          width: 36px;
+          background-image: url($img_url + "/public/img/home/lp_user/arrow_down_judge.png");
+        }
+      }
+
+    }
+
+    .step1{
+      .phone::before{
+        content: "1";
+        font-family: "Montserrat";
+        position: absolute;
+        color: #e4e4e4;
+        opacity: 0.5;
+        font-size: 185px;
+        left: -63px;
+        top: -86px;
+        &::before{
+          content: "a";
+        }
+      }
+      .phone .hand{
+        &::before{
+          content: '';
+          position: absolute;
+          bottom: -30px;
+          right: -59px;
+          z-index: 1;
+          display: inline-block;
+          width: 100px;
+          height: 81px;
+          background-image: url($img_url + "/public/img/home/lp_user/sec04hand.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          vertical-align: middle;
+        }
+        &::after{
+          content: '';
+          position: absolute;
+          right: -73px;
+          bottom: 10px;
+          display: inline-block;
+          width: 56px;
+          height: 45px;
+          background-image: url($img_url + "/public/img/home/lp_user/sec04push.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    .step2{
+      .phone::before{
+        content: "2";
+        font-family: "Montserrat";
+        position: absolute;
+        color: #e4e4e4;
+        opacity: 0.5;
+        font-size: 185px;
+        left: -84px;
+        top: -86px;
+      }
+    }
+    .step3{
+      .phone::before{
+        content: "3";
+        font-family: "Montserrat";
+        position: absolute;
+        color: #e4e4e4;
+        opacity: 0.5;
+        font-size: 185px;
+        left: -84px;
+        top: -86px;
+      }
+
+      .comment01{
+        position: absolute;
+        bottom: -38px;
+        font-size: 14px;
+        font-weight: 500;
+        width: 400px;
+        left: 50%;
+        transform: translateX(-50%);
+        @media screen and (max-width: 608px){
+          font-size: 10px;
+        }
+      }
+    }
+
+  }
+
+  /* ==----------------------------------
+    ■ sec-05
+  ----------------------------------== */
+
+  #sec-05{
+    background-image: url($img_url + "/public/img/home/lp_user/sec05bg.png");
+    background-size: cover;
+    position: relative;
+    padding: 80px 0;
+    @media screen and (max-width: 608px){
+      padding: 30px 0;
+    }
+
+    .container05{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 90px;
+      @media screen and (max-width: 608px){
+        display: block;
+        margin-bottom: 83px;
+      }
+    }
+
+    .left05{
+      text-align: center;
+      margin-right: 100px;
+      width: 250px;
+      @media screen and (max-width: 608px){
+        margin: 30px auto;
+      }
+      img.txt{
+        width: 200px;
+        margin-bottom: 30px;
+      }
+      img.yen{
+        width: 240px;
+      }
+    }
+
+    .right05{
+      text-align: center;
+      min-width: 370px;
+      position: relative;
+      .info05{
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 2;
+        margin-bottom: 42px;
+        @media screen and (max-width: 608px){
+          font-size: 12px;
+          font-weight: 500;
+          margin-bottom: 27px;
+        }
+      }
+      .comment05{
+        position: absolute;
+        font-size: 14px;
+        font-weight: 500;
+        width: 400px;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        @media screen and (max-width: 608px){
+          font-size: 10px;
+        }
+      }
+    }
+
+    .reg_btn05{
+      display: table;
+      width: 367px;
+      margin: auto;
+      height: 95px;
+      background-image: url($img_url + "/public/img/home/lp_user/btn_bg.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      @media screen and (max-width: 608px){
+        width: 300px;
+      }
+    }
+  }
+
+  /* ==----------------------------------
+    ■ sec-06
+  ----------------------------------== */
+
+  #sec-06{
+    padding: 80px 0;
+    background-color: #fafafa;
+    @media screen and (max-width: 608px){
+      padding: 50px 0;
+    }
+
+    .container06{
+      display: flex;
+      justify-content: center;
+      @media screen and (max-width: 608px){
+        display: block;
+        margin-top: 50px;
+      }
+    }
+
+    .post06{
+      min-width: 324px;
+      max-width: 324px;
+      height: 666px;
+      background-color: white;
+      @media screen and (max-width: 608px){
+        margin: auto;
+      }
+      &:not(:last-child){
+        margin-right: 27px;
+        @media screen and (max-width: 608px){
+          margin: 0 auto 30px;
+        }
+      }
+
+      .head06{
+        display: flex;
+        align-items: center;
+        .ico{
+          width: 40px;
+          height: 40px;
+          margin: 10px;
+        }
+        .name{
+          font-size: 14px;
+          font-weight: 900;
+        }
+        .dots{
+          margin-left: auto;
+          margin-right: 14px;
+        }
+      }
+      .image06{
+        width: 100%;
+        height: 316px;
+        object-fit: cover;
+      }
+      .actions{
+        width: 85px;
+        margin: 10px;
+      }
+      .text06{
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1.42;
+        margin: 0 10px;
+      }
+
+    }
+  }
+
+  /* ==----------------------------------
+    ■ sec-07
+  ----------------------------------== */
+
+  #sec-07{
+    padding: 50px 0;
+    text-align: center;
+    background-image: url($img_url + "/public/img/home/lp_user/sec07bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .text07{
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 2.25;
+      margin-bottom: 100px;
+      @media screen and (max-width: 608px){
+        margin-bottom: 50px;
+        font-size: 12px;
+      }
+    }
+    .reg_btn07{
+      display: table;
+      width: 367px;
+      margin: auto;
+      height: 95px;
+      background-image: url($img_url + "/public/img/home/lp_user/btn_bg.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      @media screen and (max-width: 608px){
+        width: 300px;
+        height: 78px;
+      }
+    }
+  }
+
+   /* ==----------------------------------
+    ■ footer
+  ----------------------------------== */
+
+  #black_footer{
+    background-color: black;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .company{
+      color: white;
+      @media screen and (max-width: 608px){
+        display: none;
+      }
+    }
+    .actions_ft{
+      display: none;
+      @media screen and (max-width: 608px){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+      a{
+        width: 100%;
+        text-align: center;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      img{
+        height: 33px;
+      }
+    }
+  }
+
+}

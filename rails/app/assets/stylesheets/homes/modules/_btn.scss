@@ -1,0 +1,174 @@
+.btn{
+  padding: 20px 24px;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+
+  &.btn-primary-login{
+  background-color: white;
+  border-color: #000;
+  border-radius: 2px;
+  }
+
+  &.btn-primary{
+    border-radius: 2px;
+    @include transition_btn;
+  &:hover{
+    background: #F2F2F2;
+    color: #000;
+    border: 1px solid #F2F2F2;
+    }
+  }
+  &.btn-border{
+    border: 1px solid $black;
+    background: rgba($white, .8);
+    border-radius: 2px;
+    width: 100%;
+    color: $black;
+    &:hover{
+      background: $black;
+      color: $white;
+    }
+  }
+  &.btn-search{
+    padding: 0;
+    margin: 7px 0;
+    &:focus{
+      box-shadow: none;
+    }
+  }
+  &.keyword{
+    padding: 0;
+    font-size: $font-size-base3;
+    color: $blue;
+    svg{
+      path{
+        fill: $blue;
+      }
+    }
+  }
+}
+
+.white-btn{
+  background-color: white !important;
+  color: $black;
+  width: 40%;
+  border: 1px solid;
+  text-align: center;
+  display: block;
+  margin: auto;
+  font-weight: bold;
+  transition: .15s;
+  &:hover{
+    color: $white;
+    background-color: $black !important;
+  }
+}
+
+.black-btn{
+  background-color: black !important;
+  color: white;
+  width: 40%;
+  display: block;
+  margin: auto;
+  font-weight: bold;
+  border: 1px solid $black !important;
+  max-width: 300px;
+  @include transition_btn;
+  &:hover{
+    background: #F2F2F2 !important;
+    color: #000;
+    border: 1px solid #F2F2F2 !important;
+  }
+}
+
+.reserve-btn{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: white;
+  text-align: center;
+  border: 1px solid;
+  padding: 12px 0;
+  border-radius: 2px;
+  font-size: 16px;
+  @include font-default(bold);
+  &:after{
+    content: "";
+    background-image: url(/img/home/calendar.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+  }
+  @include transition_btn;
+  &:hover{
+    background: #F2F2F2;
+    color: #000;
+    border: 1px solid #F2F2F2;
+  }
+}
+
+.gold_btn{
+  padding: 12px 24px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #bf9d62;
+  border-radius: 2px;
+  line-height: 23px;
+  font-size: 16px;
+  cursor: pointer;
+  &.off{
+    opacity: 0.2;
+    cursor: default;
+  }
+  @include transition_btn;
+  &:hover{
+    background:#FFFBEB;
+    border-color:#FFFBEB;
+    color: black;
+  }
+}
+
+.gold_btn.disabled {
+  pointer-events: none;
+}
+
+.layout-date{
+  .btn{
+    &.btn-date{
+      font-size: $font-size-base3;
+      padding: 6px 12px;
+      width: 100%;
+      background: $gray-100;
+      line-height: 1.5;
+      &.on{
+        background: $black;
+        color: $white;
+      }
+    }
+  }
+}
+
+.black-btn{
+  font-size: 16px;
+  font-weight: bold;
+  background-color: black !important;
+  color: white;
+  width: 43%;
+  display: block;
+  margin: auto;
+
+  border: 1px solid $black !important;
+  transition: .15s;
+  max-width: 300px;
+  @include transition_btn;
+  &:hover{
+    background: #F2F2F2;
+    color: #000;
+    border: 1px solid #F2F2F2;
+  }
+}
+

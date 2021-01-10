@@ -1,0 +1,132 @@
+#layout_staff {
+  @include media-breakpoint-up(md) {
+    max-width: 608px;
+  }
+  overflow: hidden;
+
+  /*==---------------------------
+      ■ スタイリスト検索
+  -------------------------------==*/
+
+  .hkt_msg{
+    font-size: 12px;
+    padding: 20px 29px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: #f2f2f2;
+    line-height: 14px;
+    color: #828282;
+    @media (max-width: 767px){
+      color: black;
+    }
+    color: #333333;
+    line-height: 1.6em;
+    letter-spacing: 0.12em;
+  }
+
+  .insta_msg{
+    font-size: 14px;
+    margin-bottom: 16px;
+    color: #333333;
+    line-height: 1.2em;
+    letter-spacing: 0.08em;
+  }
+
+  /*==---------------------------
+      ■ スタイリスト検索
+  -------------------------------==*/
+
+  .staff_title{
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  .kana_category{
+    display: flex;
+    overflow-x: hidden;
+    overflow: auto;
+    white-space: nowrap;
+    font-weight: normal;
+    &::-webkit-scrollbar{
+      display: none;
+    }
+
+    .kana{
+      background-color: #f2f2f2;
+      border-radius: 8px;
+      padding: 8px;
+      font-size: 12px;
+      margin-right: 16px;
+      &.on{
+        background-color: black;
+        color: white;
+      }
+      &:last-child{
+        margin: 0;
+      }
+    }
+  }
+
+  .gray_txfield{
+    background-color: #f2f2f2;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    &::-webkit-input-placeholder { padding-top: 0.2em; }
+    &::placeholder {color: rgba(117, 117, 117,0.3);;}
+  }
+
+  .account_box{
+    border-radius: 2px;
+    border: solid 1px #828282;
+    background-color: #ffffff;
+    padding: 16px;
+    margin-bottom: 12px;
+    display: block;
+
+  }
+
+  .hitokoto{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+  }
+
+  .loading{
+    text-align: center;
+    display: none;
+    img{
+      width: 55px;
+      animation: rotate-anime 1.5s linear infinite;
+    }
+    &.on{
+      display: block;
+    }
+  }
+
+  .item_not_found{
+    display: none;
+    &.on{
+      display: block;
+    }
+  }
+
+  .search_more{
+    display: none;
+    color: $gold;
+    font-size: 14px;
+    text-align: center;
+    p{
+      display: inline;
+      border-bottom: 1px solid;
+      cursor: pointer;
+    }
+    &.on{
+      display: block;
+    }
+  }
+
+}

@@ -1,0 +1,379 @@
+#layout_lp_member{
+
+  overflow: hidden;
+
+  .use_btn{
+    display: table;
+    margin: auto;
+    width: 400px;
+    height: 92px;
+    background-image: url(/img/user/use_btn.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    @media screen and (max-width: 750px) {
+      width: 250px;
+      height: 59px;
+    }
+  }
+
+  .pc_no{
+    @media screen and (min-width: 750px) {
+      display: none;
+    }
+  }
+
+  /* ==----------------------------------
+    ■ sec-01
+  ----------------------------------== */
+
+  .sec-01{
+    max-width: 1440px;
+    position: relative;
+    margin: auto;
+    .kv_img_1{
+      background-image: url(/img/user/pc/mv_pc.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: right;
+      height: 692px;
+      width: 1000px;
+      margin-left: auto;
+      @media screen and (max-width: 750px) {
+        background-image: url("/img/user/sp/sp_mv.png");
+        height: 700px;
+        width: 100%;
+      }
+    }
+    .kv_box01{
+      background-color: rgba(255, 255, 255, 0.8);
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 600px;
+      height: 100%;
+      left: 0;
+      top: 0;
+      @media screen and (max-width: 750px) {
+        height: 300px;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .img01{
+        height: 282px;
+        margin-bottom: 45px;
+        @media screen and (max-width: 750px) {
+          height: 171px;
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+
+   /* ==----------------------------------
+    ■ sec-02
+  ----------------------------------== */
+
+  .sec-02{
+    max-width: 1080px;
+    margin: 50px auto;
+    text-align: center;
+    .g_02{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 50px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      @media screen and (max-width: 750px) {
+        display: inline-block;
+        font-size: 30px;
+        line-height: 32px;
+      }
+      .bd_g{
+        background: linear-gradient(transparent 35px, #f1d8ac 50%);
+        @media screen and (max-width: 750px) {
+          background: linear-gradient(transparent 22px, #f1d8ac 50%);
+        }
+      }
+    }
+    .kv02 p{
+      font-size: 18px;
+      font-weight: bold;
+      @media screen and (max-width: 750px) {
+        font-size: 12px;
+      }
+    }
+  }
+
+   /* ==----------------------------------
+    ■ sec-03
+  ----------------------------------== */
+  .sec-03{
+    max-width: 1080px;
+    margin: auto;
+
+    .howto{
+      padding: 104px 0;
+      font-size: 50px;
+      color: white;
+      font-weight: bold;
+      background-image: url(/img/user/pc/how_to_pc.jpg);
+      background-size: cover;
+      margin-bottom: 70px;
+      position: relative;
+      @media screen and (max-width: 750px) {
+        text-align: center;
+        padding: 58px 0;
+        margin-bottom: 50px;
+        font-size: 30px;
+        background-image: url(/img/user/sp/how_to_sp.jpg);
+      }
+      p{
+        position: relative;
+        z-index: 1;
+        margin-left: 97px;
+        display: inline-block;
+        line-height: 65px;
+        background: linear-gradient(transparent 49px, #d0ad71 50%);
+        @media screen and (max-width: 750px) {
+          margin: 0;
+          line-height: 36px;
+          background: linear-gradient(transparent 27px, #d0ad71 50%);
+        }
+      }
+      &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.1;
+        z-index: 0;
+      }
+    }
+
+    .boxes03{
+      margin: 16px;
+    }
+    .bx{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media screen and (max-width: 750px) {
+        display: block;
+      }
+      img{
+        width: 450px;
+        @media screen and (max-width: 750px) {
+          width: 100%;
+        }
+      }
+      @media screen and (min-width: 750px) {
+        &.bx03_2{
+          flex-flow: row-reverse;
+          height: 380px;
+        }
+      }
+    }
+    .tx{
+      h2{
+        color: $gold;
+        font-size: 38px;
+        font-weight: bold;
+        line-height: 1.5;
+        padding-bottom: 15px;
+        border-bottom: 1px solid;
+        @media screen and (max-width: 750px) {
+          font-size: 20px;
+          border-color: black;
+        }
+      }
+      p{
+        font-weight: bold;
+        font-size: 14px;
+        margin: 20px 0;
+        @media screen and (max-width: 750px) {
+          font-size: 12px;
+        }
+      }
+      @media screen and (min-width: 750px) {
+        &.tx03_1{ width: 450px; }
+        &.tx03_2{ width: 450px; }
+        &.tx03_3{ width: 532px; }
+      }
+    }
+  }
+  /* ==----------------------------------
+    ■ sec-04
+  ----------------------------------== */
+  .sec-04{
+    max-width: 1440px;
+    margin: 70px auto;
+    @media screen and (max-width: 750px) {
+      margin: 70px auto 40px;
+    }
+
+    .top04{
+      text-align: center;
+      margin-bottom: 70px;
+      @media screen and (max-width: 750px) {
+        margin-bottom: 50px;
+      }
+      .cinzel{
+        font-family: 'Cinzel-Bold';
+        font-size: 32px;
+        @media screen and (max-width: 750px) {
+          font-size: 16px;
+        }
+      }
+      h2{
+        font-size: 50px;
+        font-weight: bold;
+        margin: 24px 0;
+        @media screen and (max-width: 750px) {
+          font-size: 30px;
+          margin: 17px 0;
+        }
+      }
+      p{
+        font-size: 17px;
+        font-weight: bold;
+        @media screen and (max-width: 750px) {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .cards04{
+      display: flex;
+      justify-content: center;
+      margin: 0 16px;
+
+      @media screen and (max-width: 750px) {
+        display: block;
+      }
+    }
+    .card04{
+      border: 1px solid #bdbdbd;
+      padding: 16px;
+      border-radius: 8px;
+      width: 343px;
+      &:not(:first-child){
+        @media screen and (min-width: 750px) {
+          margin-left: 30px;
+        }
+      }
+      @media screen and (max-width: 750px) {
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto 20px;
+      }
+      .usr{
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        .ico{
+          width: 32px;
+        }
+        p{
+          font-weight: bold;
+          font-size: 14px;
+          margin-left: 12px;
+        }
+      }
+
+      .post{
+        width: 100%;
+        height: 231px;
+        object-fit: cover;
+      }
+
+      .item{
+        margin: 10px 0;
+        width: 100px;
+      }
+
+      .msg{
+        font-size: 14px;
+        margin-bottom: 14px;
+        line-height: 1.2;
+      }
+    }
+  }
+  /* ==----------------------------------
+    ■ sec-05
+  ----------------------------------== */
+
+  .sec-05{
+    max-width: 1440px;
+    margin: 70px auto 30px;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-image: url("/img/user/pc/bg_vision.jpg");
+    background-size: cover;
+    position: relative;
+    @media screen and (max-width: 750px) {
+      background-image: none;
+      padding: 0 0 60px 0;
+    }
+
+    .maru05{
+      width: 612px;
+      height: 612px;
+      border-radius: 50%;
+      background-color: #f3f3f3;
+      z-index: 0;
+      bottom: 0;
+      position: absolute;
+      display: none;
+      @media screen and (max-width: 750px) {
+        display: block;
+      }
+    }
+
+    .zdx05{
+      z-index: 1;
+      position: relative;
+    }
+
+    .cinzel{
+      font-family: 'Cinzel-Bold';
+      font-size: 32px;
+      @media screen and (max-width: 750px) {
+        font-size: 16px;
+      }
+    }
+
+    .c-hl05{
+      font-size: 48px;
+      font-weight: bold;
+      margin: 25px 0 60px;
+      @media screen and (max-width: 750px) {
+        font-size: 30px;
+        margin: 5px 0 30px;
+        line-height: 1.33;
+      }
+    }
+    .c-tx05{
+      font-size: 16px;
+      font-weight: normal;
+      margin-bottom: 30px;
+      @media screen and (max-width: 750px) {
+        font-size: 12px;
+        margin-bottom: 25px;
+        line-height: 1.92;
+      }
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}

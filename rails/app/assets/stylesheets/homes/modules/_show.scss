@@ -1,0 +1,178 @@
+#layout_show{
+
+@include media-breakpoint-up(md) {
+  max-width: 608px;
+}
+
+.show_image{
+  position: relative;
+  .repot_btn{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: gray;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-image: url(/img/home/question.svg);
+    background-size: cover;
+  }
+}
+
+.lazyload{
+  height: 100vw;
+
+  object-fit: cover;
+  @include media-breakpoint-up(md) {
+    height: 608px;
+  }
+}
+
+.bb-1-black{
+  border-bottom: 1px $black solid;
+}
+.no_cp{
+  font-size: $font-size-xs;
+  color: $red;
+  margin: .5rem 1rem;
+}
+.action_boxes{
+  .box{
+    text-align: center;
+    width: 100%;
+    border-right: 1px solid $gray-100;
+    &:last-child{
+      border: none;
+    }
+    p{
+      font-size: 12px;
+      font-weight: bold;
+      margin-top: 4px;
+    }
+    .fee{
+      font-family: 'Cinzel-Bold';
+      color: $gold;
+    }
+    img{
+      width: 20px;
+    }
+  }
+}
+
+.footer_box{
+  .vacancy_box{
+    text-align: center;
+  }
+  ul{
+    display: flex;
+    color: $gold;
+    li{
+        margin-right: 4px;
+        font-weight: bold;
+      }
+  }
+  .reserve_btn_gold{
+    text-align: center;
+    background-color: $gold;
+    @include transition_btn;
+    &:hover{
+      background:#FFFBEB;
+      border-color:#FFFBEB;
+      label{
+        color: #000;
+      }
+      img{
+        -webkit-filter: invert(100%);
+        filter: invert(100%);
+      }
+    }
+
+    label{
+      margin-right: 10px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 12px 0;
+      cursor: pointer;
+    }
+  }
+
+  //sp
+  @media screen and (max-width:767px){
+    .vacancy_box{
+      font-size: 12px;
+      display: flex;
+      justify-content: center;
+      margin: 12px 0 30px 0;
+    }
+    .reserve_btn_gold{
+      margin: 10px 30px;
+    }
+  }
+  //pc
+  @media screen and (min-width:768px){
+
+  .boxes{
+    max-width: 608px;
+    margin: 12px auto;
+    display: flex;
+    justify-content: center;
+  }
+  .vacancy_box{
+    font-size: 14px;
+    line-height: 26px;
+    margin-left: 16px;
+  }
+  .reserve_btn_gold{
+    max-width: 240px;
+    width: 100%;
+  }
+  }
+}
+
+/* ========================================
+    ■ スタイリスト情報
+======================================== */
+#stylist_contents{
+
+  .user_msg{
+    font-size: 14px;
+    @include font-default(normal);
+    color: $black;
+  }
+
+  .map{
+    border:none;
+    width:100%;
+    min-height:250px;
+  }
+  .address{
+    font-size: 14px;
+    @include font-default(normal);
+  }
+}
+}
+
+//override css bootstrap
+.carousel-indicators {
+  bottom: 24px
+}
+.carousel-control-prev, .carousel-control-next {
+  top: 50%;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background: #d8d6d6;
+}
+.carousel-indicators li {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}

@@ -1,0 +1,26 @@
+#layout_favorite{
+@include media-breakpoint-up(md) {
+  max-width: 608px;
+}
+.title{
+  padding: 36px 16px;
+  color: #111111;
+  font-size: 24px;
+}
+
+.image{
+  float: left;
+  width: 33.33333333333%;
+  height: 33.333333333vw;
+  max-height: 200px;
+  padding: 1px;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &:hover{
+    opacity: 0.8;
+  }
+}
+}

@@ -1,0 +1,11 @@
+.errors{
+  color: #ff5d5d;
+}
+.field_with_errors{
+  input[type='email'], input[type='number'], input[type='password'], input[type='search'], input[type='tel'], input[type='text'], input[type='url'], textarea, select{
+    border-color: #ff5d5d;
+  }
+  fieldset, input, select, textarea{
+    margin-bottom:0px;
+  }
+}

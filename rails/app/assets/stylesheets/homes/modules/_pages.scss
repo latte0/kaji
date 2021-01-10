@@ -1,0 +1,79 @@
+#layout_pages {
+  max-width: 521px;
+  margin: auto;
+  .top_img{
+    width: 100%;
+    @media screen and (min-width:521px) {
+      margin-top: 25px;
+      border-radius: 8px;
+    }
+  }
+  .introduction{
+    padding: 24px 16px;
+    @media screen and (min-width:521px) {
+      padding: 24px 0;
+    }
+    border-bottom: 1px solid $gray-100;
+    h2{
+      color: $gold;
+      font-weight: bold;
+      font-size: 20px;
+      text-align: center;
+    }
+    h3{
+      color: $gold;
+      font-weight: bold;
+      font-size: 14px;
+      text-align: center;
+    }
+    p{
+      font-size: 14px;
+      margin-top: 8px;
+      @media screen and (min-width:521px) {
+        margin-top: 16px;
+      }
+    }
+  }
+  .introduction_btn{
+    background-color: $black;
+    color: $white;
+    font-weight: bold;
+    max-width: 360px;
+    margin: auto;
+    border-radius: 2px;
+    padding: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:after{
+      content: url("/img/home/introduction/plain_white.svg");
+      margin-left: 7px;
+    }
+  }
+
+  .confirm_thx{
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    transform: translateY(-50%);
+    width: 100%;
+    max-width: 520px;
+    .thx{
+      color: $gold;
+      font-weight: bold;
+      font-size: 14px;
+      margin-top: 7px;
+      margin-bottom: 35px;
+    }
+    .msg{
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 9px;
+      &.gold{
+        color: $gold;
+        border-bottom: 1px solid;
+        display: inline-block;
+      }
+    }
+  }
+}

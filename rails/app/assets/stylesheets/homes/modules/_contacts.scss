@@ -1,0 +1,54 @@
+#layout_contact{
+  height: auto;
+  max-width:720px;
+  margin: 0 auto;
+  padding:0 16px;
+  .contact_menu{
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 30px;
+  }
+  .contact_text{
+    font-size: 14px;
+    line-height: normal;
+  }
+  .gold_title{
+    font-size: 14px;
+    font-weight: bold;
+    line-height: normal;
+    display: flex;
+    &:before{
+      content: "";
+      display: inline-block;
+      background: $gold;
+      width: 4px;
+      margin-right: 4px;
+    }
+  }
+  .contact_line{
+    display: block;
+    width: fit-content;
+    @include media-breakpoint-down(sm) {
+      margin: auto;
+    }
+    background-color: #00b900;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 15px 50px 15px 70px;
+    border-radius: 2px;
+    position: relative;
+    &:before{
+      content: "";
+      background: url(/img/home/line_icon.png) no-repeat;
+      position: absolute;
+      width: 23px;
+      height: 23px;
+      background-size: contain;
+      top: 50%;
+      left: 43px;
+      transform: translateY(-50%);
+    }
+  }
+
+}

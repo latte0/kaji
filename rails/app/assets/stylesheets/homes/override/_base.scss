@@ -1,0 +1,105 @@
+// Color system
+
+$white:    #fff !default;
+$gray-100: #F2F2F2 !default;
+$gray-200: #E0E0E0 !default;
+$gray-700: #BDBDBD !default;
+$gray:     #828282 !default;
+$black:    #111111 !default;
+
+$yellow-100:#fffbeb !default;
+$yellow:   #BF9D62 !default;
+$blue:     #00376B !default;
+$gold:     #bf9d62 !default;
+$gold-100: #a68855 !default;
+$red-100:  #ffebed !default;
+$red:      #eb4357 !default;
+$blue-100: #e6f0fa !default;
+$blue:     #3299fa !default;
+
+$img_url: "https://d2dg1tocdbmhjh.cloudfront.net";
+
+
+
+// Theme Font
+
+$font-family-sans-serif: "Noto Sans Japanese", -apple-system, "游ゴシック体", YuGothic, "ヒラギノ角ゴ ProN W3", BlinkMacSystemFont, "Helvetica Neue",Arial, Meiryo,"Segoe UI", sans-serif !default;
+
+$font-size-xl:    2rem  !default; //32px
+$font-size-lg:    1.25rem !default; //20px
+$font-size-md: 1.125rem !default; //18px
+$font-size-base:  1rem    !default; //16px
+$font-size-base2: .94rem  !default; //15px
+$font-size-base3: .88rem  !default; //14px
+$font-size-sm:    .81rem  !default; //13px
+$font-size-xs:    .75rem  !default; //12px
+$font-size-xxs:   .685rem !default; //11px
+$font-size-root: 16px !default;
+
+$primary:       $black !default;
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary":    $black
+  ),
+  $theme-colors
+);
+// Links
+//
+// Style anchor elements.
+
+$link-hover-color:                        $primary !default;
+$link-hover-decoration:                   none !default;
+
+// Spacing
+
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: ($spacer * .75),
+    4: $spacer,
+    5: ($spacer * 1.25),
+    6: ($spacer * 1.5),
+    7: ($spacer * 2),
+    8: ($spacer * 2.5),
+    9: ($spacer * 3),
+    10: ($spacer * 3.5),
+    11: ($spacer * 4),
+    12: ($spacer * 4.5),
+    13: ($spacer * 5),
+    14: ($spacer * 5.5),
+    15: ($spacer * 6),
+    16: ($spacer * 6.5)
+  ),
+  $spacers
+);
+
+// Buttons
+$input-btn-padding-y:         .75rem !default;
+$btn-padding-y:               $input-btn-padding-y !default;
+$btn-line-height:             1 !default;
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 960px
+) !default;
+
+$component-active-bg:         $blue !default;
+
+$input-btn-focus-width:       .2rem !default;
+$input-btn-focus-color:       rgba($component-active-bg, .25) !default;
+$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
+
+$border-radius:               8px !default;

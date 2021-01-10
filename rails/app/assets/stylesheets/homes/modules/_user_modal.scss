@@ -1,0 +1,232 @@
+#layout_user_modal{
+  .reg_modal{
+    transition: .2s ease-in-out;
+    position: fixed;
+    z-index: 5;
+    background-color: white;
+    border-radius: 8px;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 340px;
+    height: calc(100% - 35px);
+    overflow: scroll;
+    max-height: 560px;
+    width: 100%;
+    padding: 35px 20px;
+    text-align: center;
+    &.on{
+      top: 50%;
+    }
+    @media (max-width: 650px){
+      width: calc(100% - 35px);
+    }
+  }
+
+  .step{
+    height: calc(100% - 155px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 355px;
+  }
+
+
+  .error{
+    display: inline-block;
+    color: red;
+    font-size: 10px;
+    padding-left: 2px;
+  }
+
+  .top_al{
+    color: $gold;
+    i{
+      font-size: 40px;
+    }
+    h3{
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 11px;
+    }
+  }
+
+  .ft_actions{
+    position: absolute;
+    bottom: 36px;
+    left: 0;
+    right: 0;
+    @include fade-in-left;
+    .back_btn{
+      font-size: 16px;
+      background-color: white;
+      border: 2px solid;
+      width: 120px;
+      height: 48px;
+      padding: 14px 0;
+      border-radius: 30px;
+      color: $gold;
+      box-shadow: 0px 2px 7px #bfbfbf;
+      margin-right: 15px;
+    }
+
+    .next_btn{
+      font-size: 16px;
+      background-color: $gold;
+      width: 120px;
+      height: 48px;
+      padding: 14px 0;
+      border: 2px solid $gold;
+      border-radius: 30px;
+      color: white;
+      box-shadow: 0px 2px 7px #bfbfbf;
+    }
+  }
+
+  /*-------------------------
+    ■ step1
+  ----------------------*/
+  .step_1{
+    display: flex;
+    align-items: center;
+    .txt{
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 26px;
+    }
+  }
+
+  /*-------------------------
+    ■ step2
+  ----------------------*/
+  .step_2{
+    margin-top: 15px;
+    .fm{
+      text-align: left;
+      label{
+        line-height: 1;
+        font-size: 11px;
+        margin-bottom: 9px;
+        margin-top: 16px;
+      }
+      input[type=text],select{
+        border: 1px solid #bfbfbf;
+        border-radius: 8px;
+        padding: 11px 8px;
+        width: 100%;
+      }
+      select{
+        padding: 13px 8px;
+      }
+      .field{
+        display: flex;
+      }
+    }
+
+    .fm_name{
+      input:first-child{
+        margin-right: 8px;
+      }
+    }
+
+    .fm_gender{
+
+      .field{
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      button{
+        width: 100%;
+        background-color: #eeeeee;
+        padding: 14px;
+        font-size: 15px;
+        outline: none;
+        transition: .3s;
+        &.on{
+          opacity: 0.51;
+          background-color: #000000;
+          color: white;
+        }
+      }
+      .women{
+        margin-right: 1px;
+      }
+    }
+
+    .fm_bthday{
+      .year{width: 100px;}
+      .month{width: 50px}
+      .day{width: 50px}
+
+      .f_name{
+        position: relative;
+        bottom: -26px;
+        font-size: 11px;
+        padding: 0 5px;
+      }
+    }
+  }
+
+  /*-------------------------
+    ■ step3
+  ----------------------*/
+  .step_3{
+    padding-top: 73px;
+    .txt{
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 26px;
+    }
+    .email_field{
+      min-height: 40px;
+      margin-top: 45px;
+      border: 1px solid #bfbfbf;
+      border-radius: 8px;
+      padding: 11px 30px;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: center;
+    }
+    .mail{
+      min-height: 40px;
+      margin-top: 45px;
+      border: 1px solid #bfbfbf;
+      border-radius: 8px;
+      padding: 11px 30px;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  /*-------------------------
+    ■ step4
+  ----------------------*/
+  .step_4{
+    padding-top: 32px;
+    margin-top: 22px;
+    .txt{
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 29px;
+      .focus{
+        display: inline-block;
+        border-bottom: 1px solid;
+        font-weight: bold;
+      }
+    }
+    .mail{
+      margin: 43px 0;
+    }
+    .notice{
+      color: #eb4357;
+      font-size: 11px;
+    }
+  }
+
+  .body{
+    @include fade-in-left;
+  }
+
+}

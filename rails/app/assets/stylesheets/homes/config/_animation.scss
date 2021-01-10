@@ -1,0 +1,24 @@
+@mixin fade-in-left{
+  animation-name: fade-in-left;
+  animation-duration: .3s; //アニメーション時間
+  animation-timing-function: ease-out; //アニメーションさせるイージング
+  animation-iteration-count: 1; //繰り返し回数
+  animation-direction: normal; //往復処理をするかどうか
+  animation-fill-mode: none; //アニメーション後のスタイルをどうするか
+}
+
+@keyframes rotate-anime {
+  0%  {transform: rotate(0);}
+  100%  {transform: rotate(360deg);}
+}
+
+@keyframes fade-in-left {
+  0%{
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  100%{
+    opacity: 1;
+    transform: translate3d(0px);
+  }
+}

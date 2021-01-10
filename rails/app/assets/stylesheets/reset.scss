@@ -1,0 +1,28 @@
+ul{
+	list-style:none;
+	padding:0px;
+	margin:0px;
+	li{
+		list-style:none;
+		padding:0px;
+		margin:0px;
+	}
+}
+p{
+	margin-bottom:1rem;
+}
+dl{
+	margin:0px;
+	padding:0px;
+	dt{
+		margin:0px;
+		padding:0px;
+	}
+	dd{
+		margin:0px;
+		padding:0px;
+	}
+}
+fieldset, input, select, textarea{
+	margin-bottom:0;
+}

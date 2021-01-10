@@ -83,7 +83,7 @@ Rails.application.configure do
     :port => 587,
     :domain => 'sfc.keio.ac.jp',
     :user_name => "t16463kj",
-    :password => "uxtksymx0726",
+    :password => "Uxtksymx0726",
     :domain => 'sfc.keio.ac.jp'
   }
 

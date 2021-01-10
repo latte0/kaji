@@ -1,0 +1,149 @@
+.tutorial_home{
+  background-image: url(/img/home/tutorial_home.jpg);
+  background-size: cover;
+  max-width: 608px;
+  margin: 0 auto;
+  color: $white;
+  text-align: center;
+  .tutorial_contents{
+    padding: 20% 0;
+  }
+  fieldset{
+    position: relative;
+    padding: 16px 0;
+    input[type="text"]{
+      line-height: normal;
+      height: auto;
+      width: 100%;
+      font-size: 16px;
+      transform: scale(0.8);
+      padding: 12px 0 12px 10px;
+      border: 1px solid $gray-700;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.01);
+      background-color: $white;
+    }
+    .search_btn{
+      position: absolute;
+      top:50%;
+      right:11%;
+      padding-bottom: 16px;
+      display: flex;
+      overflow-wrap: break-word;
+      flex-wrap:wrap;
+      justify-content: center;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      color: $white;
+      font-size: 14px;
+      font-weight: bold;
+      margin-right: 8px;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      background-color: $white;
+      padding-right: 5px;
+    }
+  }
+  .lists{
+    padding-bottom: 16px;
+    display: flex;
+    overflow-wrap: break-word;
+    flex-wrap:wrap;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    button{
+      color: $white;
+      font-size: 14px;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+  }
+  // ここからモーダル
+  .modal_cancel{
+    padding: 8px;
+    width: fit-content;
+    margin:8px 8px 0 auto;
+    background-color: $gray-100;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .modal_wrap{
+    position: fixed;
+    top: 150%;
+    left: 50%;
+    transition: .3s;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 4;
+    background-color: $white;
+    color: $black;
+    width: calc(100% - 16px);
+    height: 100%;
+    max-width: 608px;
+    max-height: 520px;
+    border-radius: 8px;
+    padding-bottom: 1rem;
+    &.on{
+      top: 50%;
+    }
+    @include media-breakpoint-up(sm) {
+      max-height: 620px;
+    }
+  }
+
+  .modal_contents{
+    margin: auto;
+    max-width: 400px;
+    padding: 0 10px;
+    img{
+      width: 100%;
+      height: 250px;
+      object-fit: contain;
+      @include media-breakpoint-up(sm) {
+        height: 350px;
+      }
+    }
+    h2{
+      font-size: 20px;
+      font-weight: bold;
+      margin: 16px 0;
+    }
+    p{
+      font-size: 14px;
+      color: $gray;
+      text-align: left;
+    }
+  }
+
+  .ctl_tutorial{
+    bottom: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 24px 0;
+
+    button{
+      color: $white;
+      border-radius: 2px;
+      background-color: $gold;
+      width: 160px;
+      padding:15px 0;
+      margin: 0 auto;
+      display: block;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+  }
+  .modal_step{
+    display: inline-flex;
+    width: 10px;
+    height: 10px;
+    background-color: $gray-700;
+    border-radius: 50%;
+    margin-top: 24px;
+    &.on{
+      background-color: $gold;
+    }
+  }
+}

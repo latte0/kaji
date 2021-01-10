@@ -1,0 +1,371 @@
+#layout_form {
+  margin: 0 auto;
+  @include media-breakpoint-up(md) {
+    max-width: 608px;
+  }
+  h4{
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  form {
+    label{
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+    span{
+      color: $red;
+    }
+  }
+  .errors + input{
+    border-color: $red !important;
+    background-color: $yellow-100 !important;
+  }
+  .field_with_errors{
+    input, select{
+      border-color: $red !important;
+      background-color: $yellow-100 !important;
+    }
+
+}
+.register-layout {
+  width:100%;
+  display:block;
+  margin:auto auto;
+  text-align: center;
+
+  .login-input-text{
+    padding: 14px 8px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 343px;
+    border: 1px solid $gray-700;
+    @include placeholder($gray-700);
+    &::-webkit-input-placeholder { padding-top: 0.3em; }
+  }
+
+  .check-outer-box {
+    max-width: 343px !important;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    .left-pos{
+      text-align: left;
+    }
+  }
+
+  /*
+  * チェックブックスはlayout_formの謎の力で歪められるので、無類やりこうした。
+  * 多分超アンチパターン
+  */
+  @media screen and (min-width: 576px) and (max-width:767px){
+    .check-outer-box {
+      position: relative;
+      margin: auto;
+      margin-bottom: 20px;
+      padding-right: 160px;
+      width:400px;
+    }
+  }
+  @media screen and (min-width: 0px) and (max-width:576px){
+    .check-outer-box {
+      position: relative;
+      margin: auto;
+      margin-bottom: 20px;
+      padding-right: 160px;
+      width:400px;
+    }
+  }
+  
+
+  .forget-text{
+    font-size: 14px;
+  }
+
+
+
+  .login-button {
+    max-width: 343px;
+    width: 100%;
+    height: 55px;
+  }
+  
+  .login-box {
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    padding: 10px 5px 10px 5px;
+    border-width: 1px;
+    border-radius: 5px;
+    background-color: white;
+    width: 160px;
+    height: 55px;
+    border-radius: 2px;
+  }
+
+  
+  .sns-login-box {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    border-style: solid;
+    padding: 11px 0px 11px 0px;
+    border-width: 1px;
+    background-color: white;
+    width: 100%;
+    max-width: 343px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.01);
+    border: solid 1px #bdbdbd;
+    background-color: #ffffff;
+
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;  
+    line-height: normal;
+    letter-spacing: normal;
+    vertical-align:middle;
+    text-align: center;
+
+
+    $img-width: 26px;
+    $img-left-margin: 16px;
+    .snsimg {
+      text-align: left;
+      width: $img-width;
+      height: $img-width;
+      margin-left: $img-left-margin;
+      float: left;
+    }
+
+
+    span.gmail {
+      margin-left: -($img-width + $img-left-margin );
+      color: #111111;
+    }
+    span.facebook {
+      margin-left: -($img-width + $img-left-margin );
+      color: #1778f2;
+    }
+    span.twitter {
+      margin-left: -($img-width + $img-left-margin );
+      color: #1da1f2
+    }
+    span.line {
+      margin-left: -($img-width + $img-left-margin );
+      color: #00b900
+    }
+  }
+  button:focus {
+    outline:0;
+  }
+
+  .mail-login-box {
+    margin: 0 auto;
+    border-style: solid;
+    width: 100%;
+    max-width: 343px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-style: solid;
+    padding: 11px 0px 11px 0px;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.01);
+
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;  
+    line-height: normal;
+    letter-spacing: normal;
+    vertical-align:middle;
+    text-align: center;
+
+    $img-width: 26px;
+    $img-left-margin: 16px;
+    .emailimg {
+      text-align: left;
+      width: $img-width;
+      height: $img-width;
+      margin-left: $img-left-margin;
+      float: left;
+    }
+
+
+    span.email {
+      margin-left: -($img-width + $img-left-margin );
+      color: white;
+    }
+  }
+  .space-margin-small {
+    margin:15px;
+  }  
+  .space-margin {
+    margin:25px;
+  }  
+  .space-margin-large {
+    margin:75px;
+  }
+
+}
+
+a.link{
+  color: $gold;
+  text-align: center;
+  display: block;
+}
+
+.default_text{
+  padding: 14px 8px;
+  border-radius: 8px;
+  width: 100%;
+  border: 1px solid $gray-700;
+  @include placeholder($gray-700);
+  &::-webkit-input-placeholder { padding-top: 0.3em; }
+}
+
+.date_field{
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  select{
+    font-size: 16px;
+    padding: 13px 34px 13px 16px;
+    border: solid 1px #bdbdbd;
+  }
+  span{
+    color:$black;
+    font-size: 12px;
+    margin-right: 16px;
+    position: relative;
+    &:after{
+      content: '';
+      background-image: url(/img/home/arrow.svg);
+      width: 8px;
+      height: 17px;
+      top: 0;
+      left: -27px;
+      position: absolute;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: rotate(270deg);
+      pointer-events: none;
+    }
+  }
+  .field_with_errors + span{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -30px;
+  }
+}
+
+.gender_field{
+  display: flex;
+  span{
+    font-size: 14px;
+    color: #111111;
+    line-height: 32px;
+    margin-left: 8px;
+    margin-right: 16px;
+  }
+  label{
+    width: 32px;
+    height: 32px;
+    border: 1px solid $gray-700;
+    background-color: $gray-200;
+    border-radius: 50%;
+  }
+  input[type="radio"]:checked + label{
+    background-color: $gold;
+    border-color: $gold-100;
+    position: relative;
+    &::after{
+      content: "";
+      background-color: white;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+    }
+  }
+}
+
+.accept_check{
+  label{
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    background-color: $gray-200;
+    border: 1px solid $gray-700;
+    &:after{
+      content: "";
+      background-image: url(/img/home/check.svg);
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background-size: contain;
+      vertical-align: middle;
+      background-repeat: no-repeat;
+    }
+    &.checked{
+      background-color: $gold;
+      border-color: $gold-100;
+    }
+  }
+  .field_with_errors + label{
+    border-color: $red !important;
+  }
+  a{
+    color: $gold;
+    border-bottom: 1px solid $gold;
+    font-size: 14px;
+    display: inline-block;
+  }
+  span{
+    font-size: 14px;
+    color: $black;
+  }
+}
+
+.link_box{
+  border: 1px solid $gray;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 23px;
+  position: relative;
+  img{
+    opacity: 0.3;
+  }
+  &:after{
+    content: "";
+    background-image: url(/img/home/arrow.svg);
+    width: 11px;
+    height: 19px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: rotate(180deg) translateY(50%);
+    background-size: contain;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+  }
+}
+
+.signup_btn{
+  background-color: $gold;
+  color: white;
+  font-weight: bold;
+  display: block;
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+}
