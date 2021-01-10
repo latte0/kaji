@@ -21,8 +21,8 @@ RAILS_ENV=development rails db:migrate
 RAILS_ENV=development rails db:seed
 
 # whenever --update-crontab
-# cron
+# cronecho "start rails command: 'production rails s' "
+RAILS_ENV=development bundle exec puma -C config/puma.rb
 
-RAILS_ENV=development bundle exec rails s
 #nginxを通さない
 #RAILS_ENV=development bundle exec rails s -b 0.0.0.0
