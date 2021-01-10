@@ -39,8 +39,6 @@ rails/tmp/cache/*
 /rails/public/version.html
 /rails/.byebug_history
 
-# Ignore master key for decrypting credentials and more.
-/rails/config/master.key
 
 
 /rails/public/packs
