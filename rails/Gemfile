@@ -66,3 +66,6 @@ end
 gem 'pg'
 
 gem 'devise'
+
+
+gem 'unicorn-rails'
