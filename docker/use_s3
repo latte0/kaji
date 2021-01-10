@@ -1,0 +1,24 @@
+#!/bin/bash
+#!/bin/bash
+
+show_error () {
+    echo "以下のコマンドで実行してください。"
+    echo "# s3を使用する"
+    echo "$ ./use_s3 true"
+
+}
+
+if [ $# = 0 ]; then
+    show_error
+fi
+
+if [ $1 != "app" ] && [ $1 != "batch" ]; then
+    show_error
+fi
+
+
+if [ $1 = "app" ]; then
+    docker-compose -f docker-compose.yml exec api-batch bash
+elif [ $1 = "batch" ]; then
+    docker-compose -f docker-compose.yml exec api-batch bash
+fi

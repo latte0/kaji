@@ -1,0 +1,6 @@
+#!/bin/bash
+
+
+# reloadだと環境変数がアップデートされない
+docker-compose stop api-web
+docker-compose up -d api-web

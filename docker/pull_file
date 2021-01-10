@@ -1,0 +1,64 @@
+#!/bin/bash
+
+
+show_error () {
+    echo "以下のコマンドで実行してください。"
+    echo "# sqlファイル新規取得"
+    echo "$ ./pull_file new "
+    echo "# sqlファイルアップデート"
+    echo "$ ./pull_file update "
+    exit 1
+}
+
+
+if [ $# = 0 ]; then
+    show_error
+fi
+
+if [ $1 != "new" ] && [ $1 != "update" ]; then
+    show_error
+fi
+
+if [ $1 = "update" ]; then
+
+    cd kaji_file
+    git pull
+
+elif [ $1 = "new" ]; then
+
+
+    echo -n "github のユーザーネームを入力してください:"
+    read username
+
+    echo ""
+    echo "トークンの発行URL: https://github.com/settings/tokens/new"
+    echo "repoをチェックしてトークンを発行"
+    echo -n "github のTOKENを入力してください:"
+    read token
+
+    git clone https://${username}:${token}@github.com/kaji-jp/kaji_file.git
+    cd kaji_file
+
+fi
+# zip kaji.zip kaji20200813.sql
+# mv kaji.zip kaji_file
+# cd kaji_file
+# split -b 45m kaji.zip splited.
+# git add .
+# git commit -m "revise"
+# git push origin master
+cat splited.* > file.zip
+unzip file.zip
+rm -fr file.zip
+mv dump.sql ../mysql/data
+cd ../
+
+if [[ $(docker-compose ps -q api-db) == "" ]]; then
+    echo "$ ./init app #これでアプリケーションを起動してデータベースを作ってください。"
+    # docker-compose -f docker-compose.yml up -d api-web api-db
+fi
+
+echo "importing sql ..."
+docker exec -it $(docker-compose ps -q api-db) /bin/bash -l -c 'mysql -u kaji -proot kaji_development < /var/lib/mysql/dump.sql'
+
+echo "complete import sql"

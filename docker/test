@@ -1,0 +1,19 @@
+#!/bin/bash
+
+echo "test版のweb appを起動するため、develop版を停止します。"
+./stop
+
+docker-compose -f docker-compose.test.yml up -d api-web api-db api-redis api-s3 createbuckets
+
+until docker exec -it $(docker-compose ps -q api-web) /bin/sh -c "mysqladmin ping -h api-db --silent;" 
+do
+  echo 'waiting for mysqld to be connectable...'
+  sleep 2
+done
+
+docker exec -it $(docker-compose ps -q api-web) /bin/sh -c "bin/rails db:create RAILS_ENV=test"
+docker exec -it $(docker-compose ps -q api-web) /bin/sh -c "bin/rails db:migrate RAILS_ENV=test"
+docker exec -it $(docker-compose ps -q api-web) /bin/sh -c "USE_AWS_S3=true bundle exec rspec"
+
+
+# docker exec -it $(docker-compose ps -q api-web) /bin/sh -c "bundle exec rails test"

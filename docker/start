@@ -1,0 +1,35 @@
+#!/bin/bash
+
+show_error () {
+    echo "以下のコマンドで実行してください。"
+    echo "# アプリケーションの起動"
+    echo "$ USE_AWS_S3=true ./start app "
+    echo "# バッチの起動"
+    echo "$ USE_AWS_S3=true ./start batch "
+    echo "# ツール(phpmyadmin, rebrow)の起動"
+    echo "$ USE_AWS_S3=true ./start tool "
+    exit 1
+}
+
+if [ $# = 0 ]; then
+    show_error
+fi
+
+if [ $1 != "app" ] && [ $1 != "batch" ] && [ $1 != "tool" ]; then
+    show_error
+fi
+
+if [ $1 = "app" ]; then
+
+    # init build
+    docker-compose -f docker-compose.yml up -d webpack
+    docker-compose -f docker-compose.yml exec -d webpack bin/webpack-dev-server && docker-compose -f docker-compose.yml up -d api-web api-db api-redis web api-s3 createbuckets mailhog
+
+
+elif [ $1 = "batch" ]; then
+    docker-compose -f docker-compose.yml up -d api-batch
+
+
+elif [ $1 = "tool" ]; then
+    docker-compose -f docker-compose.yml up -d phpmyadmin redis-client
+fi

@@ -1,0 +1,37 @@
+#!/bin/bash
+
+show_error () {
+    echo "# アプリケーションの起動"
+    echo "$ USE_AWS_S3=true ./restart app "
+    echo "# バッチの起動"
+    echo "$ USE_AWS_S3=true ./restart batch "
+    echo "# ツール(phpmyadmin, rebrow)の起動"
+    echo "$ USE_AWS_S3=true ./restart tool "
+    exit 1
+}
+
+docker stop $(docker ps -a -q)
+
+if [ $# = 0 ]; then
+    show_error
+fi
+
+if [ $1 != "app" ] && [ $1 != "batch" ] && [ $1 != "tool" ]; then
+    show_error
+fi
+
+if [ $1 = "app" ]; then
+    docker-compose -f docker-compose.yml up --build -d webpack
+    docker-compose -f docker-compose.yml exec webpack sh script/docker_delete_webpack.sh
+    docker-compose -f docker-compose.yml exec webpack rails webpacker:install 
+    docker-compose -f docker-compose.yml exec webpack sh script/docker_build_webpack.sh
+    docker-compose -f docker-compose.yml exec -d webpack bin/webpack-dev-server && docker-compose -f docker-compose.yml up --build -d api-web api-db api-redis web api-s3 createbuckets mailhog
+
+
+elif [ $1 = "batch" ]; then
+    docker-compose -f docker-compose.yml up -d api-batch
+
+
+elif [ $1 = "tool" ]; then
+    docker-compose -f docker-compose.yml up -d phpmyadmin redis-client
+fi

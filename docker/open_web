@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "http://localhost:4551 を開いてリンクを渡してください"
+
+docker-compose -f docker-compose.yml up ngrok
+

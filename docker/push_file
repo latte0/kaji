@@ -1,0 +1,8 @@
+zip kaji.zip dump.sql
+mv kaji.zip kaji_file
+cd kaji_file
+split -b 45m kaji.zip splited.
+rm -fr kaji.zip
+git add .
+git commit -m "revise"
+git push origin master
